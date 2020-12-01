@@ -19,6 +19,7 @@ defmodule GitooglWeb.Router do
 
     live "/", PageLive, :index
     live "/timer", TimerLive
+    live "/customers", CustomerLive
   end
 
   # Other scopes may use custom stacks.

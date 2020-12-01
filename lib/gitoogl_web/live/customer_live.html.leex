@@ -1,0 +1,11 @@
+<div class="flex px-5 py-5 shadow-md rounded-xl">
+	<form class="flex w-full" action="#" phx-submit="add">
+		<%= text_input :customer, :name, placeholder: "Add the name of the new customer", class: "pl-4" %>
+		<%= submit "Add Customer", phx_disable_with: "Adding...", class: "px-4 py-2 text-white bg-purple-500 border-gray-300 rounded-xl focus:bg-purple-600 hover:bg-purple-600 md:outline-none"  %>
+	</form>
+</div>
+<ul>
+	<%= for customer <- @customers do %>
+		<li class="text-black"><%= customer.name %></li>
+	<% end %>
+</ul>
